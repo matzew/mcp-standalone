@@ -2,6 +2,7 @@
 # defaults file for ansible-service-broker-setup
 dockerhub_org: feedhenry
 dockerhost: docker.io
+openshift_version: v3.6.0
 launch_apb_on_bind: true
 skip_apb: 
 apb_sync: false
