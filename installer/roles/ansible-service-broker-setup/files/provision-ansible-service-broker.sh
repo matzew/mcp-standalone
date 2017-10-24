@@ -2,7 +2,7 @@
 
 readonly DOCKERHUB_USER="${1}"
 readonly DOCKERHUB_PASS="${2}"
-readonly DOCKERHUB_ORG="aidenkeatingrht"
+readonly DOCKERHUB_ORG="${3}"
 readonly LAUNCH_APB_ON_BIND="${4}"
 
 readonly TEMPLATE_URL="https://raw.githubusercontent.com/openshift/ansible-service-broker/master/templates/deploy-ansible-service-broker.template.yaml"
