@@ -16,7 +16,7 @@ function finish {
 
 trap 'finish' EXIT
 
-readonly TEMPLATE_VERSION="71e6a73cfa314d183f73e37eae3050c5ebfe994b"
+readonly TEMPLATE_VERSION="e543438f18a6f9b43d7b9613a3d9504c302ff809"
 readonly TEMPLATE_URL="https://raw.githubusercontent.com/openshift/ansible-service-broker/${TEMPLATE_VERSION}/templates/deploy-ansible-service-broker.template.yaml"
 readonly TEMPLATE_LOCAL="/tmp/deploy-ansible-service-broker.template.yaml"
 readonly TEMPLATE_VARS="-p BROKER_CA_CERT=$(oc get secret -n kube-service-catalog -o go-template='{{ range .items }}{{ if eq .type "kubernetes.io/service-account-token" }}{{ index .data "service-ca.crt" }}{{end}}{{"\n"}}{{end}}' | tail -n 1)"
