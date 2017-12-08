@@ -1,8 +1,6 @@
 ---
 # defaults file for oc-cluster-up
 
-service_catalog: "true"
-
 hawkular_metrics: "false"
 
 host_config_dir: "{{playbook_dir}}/../ui"

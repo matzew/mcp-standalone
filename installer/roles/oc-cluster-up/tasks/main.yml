@@ -33,11 +33,6 @@
     when:
     - hawkular_metrics|bool
 
-  - set_fact:
-      cluster_up_command: "{{ cluster_up_command }} --service-catalog={{ service_catalog }}"
-    when:
-    - service_catalog is defined
-
   - name: Obtain host config directory with allowed format
     shell: "cd {{ host_config_dir }} && pwd"
     register: host_config_dir_pwd
